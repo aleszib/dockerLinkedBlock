@@ -1,4 +1,4 @@
-FROM rocker/rstudio:4.0.5
+FROM rocker/tidyverse
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
