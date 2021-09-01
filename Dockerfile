@@ -7,11 +7,14 @@ RUN apt-get update \
   redis-tools \
   libxml2-dev \
   libglpk-dev \
+  build-essential \
+  libglpk40 \
+  libgdal-dev\
 ## clean up
     && apt-get clean \ 
     && rm -rf /var/lib/apt/lists/ \ 
     && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
-
+ 
 RUN install2.r --error \
   --deps TRUE \
   devtools \
