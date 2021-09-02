@@ -8,6 +8,7 @@ RUN apt-get update \
   build-essential \
   libgdal-dev \
   libproj-dev \
+  libudunits2-dev \
 ## clean up
     && apt-get clean \ 
     && rm -rf /var/lib/apt/lists/ \ 
