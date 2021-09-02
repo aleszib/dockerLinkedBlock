@@ -2,12 +2,12 @@ FROM rocker/tidyverse
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
-  libxml2 \
   git \
   redis-tools \
-  libxml2-dev \
   libglpk-dev \
   build-essential \
+  libgdal1-dev \
+  libproj-dev \
 ## clean up
     && apt-get clean \ 
     && rm -rf /var/lib/apt/lists/ \ 
