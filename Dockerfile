@@ -8,8 +8,6 @@ RUN apt-get update \
   libxml2-dev \
   libglpk-dev \
   build-essential \
-  libglpk40 \
-  libgdal-dev\
 ## clean up
     && apt-get clean \ 
     && rm -rf /var/lib/apt/lists/ \ 
