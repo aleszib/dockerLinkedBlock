@@ -6,7 +6,7 @@ RUN apt-get update \
   redis-tools \
   libglpk-dev \
   build-essential \
-  libgdal1-dev \
+  libgdal-dev \
   libproj-dev \
 ## clean up
     && apt-get clean \ 
