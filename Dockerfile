@@ -18,8 +18,12 @@ RUN install2.r --error \
   --deps TRUE \
   devtools \
   ggplot2 \
-  blockmodels
-  
+  blockmodels \
+  RCurl \
+  doRNG \
+  doParallel \
+  foreach
+ 
 RUN R -e 'install.packages("blockmodeling", repos="http://R-Forge.R-project.org")' \
 	&& R -e 'install.packages("StochBlockTest", repos="http://R-Forge.R-project.org")' \ 
 	&& R -e 'remotes::install_github("bwlewis/doRedis")' \ 
