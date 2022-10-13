@@ -29,6 +29,7 @@ RUN R -e 'install.packages("blockmodeling", repos="http://R-Forge.R-project.org"
 	&& R -e 'remotes::install_github("bwlewis/doRedis")' \ 
 	&& R -e 'remotes::install_github("karthik/rdrop2")' \
 	&& R -e 'remotes::install_github("Demiperimetre/GREMLINS")' \
+	&& R -e 'remotes::install_github("Chabert-Liddell/MLVSBM")' \
     ## clean up
     && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
 
