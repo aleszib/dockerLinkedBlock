@@ -9,6 +9,7 @@ RUN apt-get update \
   libgdal-dev \
   libproj-dev \
   libudunits2-dev \
+  libopenmpi-dev \
 ## clean up
     && apt-get clean \ 
     && rm -rf /var/lib/apt/lists/ \ 
