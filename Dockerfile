@@ -36,7 +36,6 @@ RUN apt-get update \
  
 RUN install.r --error \
   --deps TRUE \
-  --ntry 20 \
   --skipinstalled \
   devtools \
   blockmodels \
