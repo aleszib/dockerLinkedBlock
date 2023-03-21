@@ -32,10 +32,11 @@ RUN apt-get update \
   python3-graph-tool \
   && apt-get clean 
 
-##COPY installMy.r .
+COPY installMy.r .
  
-RUN install.r --error \
+RUN Rscript installMy.r --error \
   --deps TRUE \
+  --ntry 20 \
   --skipinstalled \
   devtools \
   blockmodels \
@@ -55,11 +56,11 @@ RUN R -e 'install.packages("blockmodeling", repos="http://R-Forge.R-project.org"
     ## clean up
     && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
 
-RUN R -e 'remotes::install_github(c("Chabert-Liddell/MLVSBM","karthik/rdrop2"))' \
-    && install.r --error \
+RUN	R -e 'remotes::install_github(c("Chabert-Liddell/MLVSBM","karthik/rdrop2"))' \
+    && Rscript installMy.r --error \
 	--deps TRUE \
 	--skipinstalled \
-        doRedis \
+    doRedis \
 	GREMLINS \
 	Microsoft365R \
     ## clean up
