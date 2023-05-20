@@ -14,6 +14,7 @@ RUN apt-get update \
   python3-scipy \
   python3-numpy \
   python3-matplotlib \
+  python3-pandas \
   python3-pip \
   software-properties-common\
 ## clean up
@@ -56,7 +57,7 @@ RUN R -e 'install.packages("blockmodeling", repos="http://R-Forge.R-project.org"
     ## clean up
     && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
 
-RUN	R -e 'remotes::install_github(c("Chabert-Liddell/MLVSBM","karthik/rdrop2"))' \
+RUN R -e 'remotes::install_github(c("Chabert-Liddell/MLVSBM","karthik/rdrop2"))' \
     && Rscript installMy.r --error \
 	--deps TRUE \
 	--skipinstalled \
@@ -70,7 +71,6 @@ RUN	R -e 'remotes::install_github(c("Chabert-Liddell/MLVSBM","karthik/rdrop2"))'
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
   python3-cairo \
-  python3-pandas \
   libxt6 \
   libgtk-3-0 \
   libgtk-3-dev
