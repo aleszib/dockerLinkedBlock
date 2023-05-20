@@ -33,10 +33,15 @@ RUN apt-get update \
   && apt-get clean 
 
 COPY installMy.r .
- 
+
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends \
+  libhiredis-dev\
+  && apt-get clean 
+
 RUN Rscript installMy.r --error \
   --deps TRUE \
-  --ntry 20 \
+  --ntry 1 \
   --skipinstalled \
   devtools \
   blockmodels \
