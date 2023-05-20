@@ -70,6 +70,7 @@ RUN	R -e 'remotes::install_github(c("Chabert-Liddell/MLVSBM","karthik/rdrop2"))'
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
   python3-cairo \
+  python3-pandas \
   libxt6 \
   libgtk-3-0 \
   libgtk-3-dev
