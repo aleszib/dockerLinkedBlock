@@ -61,7 +61,7 @@ RUN R -e 'install.packages("blockmodeling", repos="http://R-Forge.R-project.org"
     ## clean up
     && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
 
-RUN	R -e 'remotes::install_github(c("Chabert-Liddell/MLVSBM","karthik/rdrop2"))' \
+RUN	R -e 'remotes::install_github(c("gfkse/bettermc", "Chabert-Liddell/MLVSBM","karthik/rdrop2"))' \
     && Rscript installMy.r --error \
 	--deps TRUE \
 	--skipinstalled \
