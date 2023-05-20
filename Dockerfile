@@ -60,7 +60,6 @@ RUN	R -e 'remotes::install_github(c("Chabert-Liddell/MLVSBM","karthik/rdrop2"))'
     && Rscript installMy.r --error \
 	--deps TRUE \
 	--skipinstalled \
-    ##  doRedis \ ## caused error
 	GREMLINS \
 	Microsoft365R \
     ## clean up
